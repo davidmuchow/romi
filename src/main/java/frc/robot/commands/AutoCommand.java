@@ -17,9 +17,9 @@ public class AutoCommand extends CommandBase {
   private boolean auto_finished = false;
 
   // DO NOT CHANGE
-  public AutoCommand(RomiDrivetrain drivetrain) {
+  public AutoCommand(RomiDrivetrain drivetrain, RomiGyro gyro) {
     this.drivetrain = drivetrain;
-    gyro = new RomiGyro();
+    this.gyro = gyro;
 
     addRequirements(this.drivetrain);
   }

@@ -6,6 +6,7 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.commands.AutoCommand;
+import frc.robot.sensors.RomiGyro;
 import frc.robot.subsystems.RomiDrivetrain;
 import edu.wpi.first.wpilibj2.command.Command;
 
@@ -18,7 +19,8 @@ import edu.wpi.first.wpilibj2.command.Command;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final RomiDrivetrain m_romiDrivetrain = new RomiDrivetrain();
-  private final AutoCommand m_autoCommand = new AutoCommand(m_romiDrivetrain);
+  private final RomiGyro m_romiGyro = new RomiGyro();
+  private final AutoCommand m_autoCommand = new AutoCommand(m_romiDrivetrain, m_romiGyro);
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
